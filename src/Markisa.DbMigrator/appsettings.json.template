@@ -1,0 +1,28 @@
+{
+  "ConnectionStrings": {
+    "Default": "Server=;Port=;Database=;Password=;username="
+  },
+  "IdentityServer": {
+    "Clients": {
+      "Markisa_Web": {
+        "ClientId": "Markisa_Web",
+        "ClientSecret": "1q2w3e*",
+        "RootUrl": "https://localhost:44345"
+      },
+      "Markisa_App": {
+        "ClientId": "Markisa_App",
+        "ClientSecret": "1q2w3e*",
+        "RootUrl": "http://localhost:4200"
+      },
+      "Markisa_Blazor": {
+        "ClientId": "Markisa_Blazor",
+        "RootUrl": "https://localhost:44307"
+      },
+      "Markisa_Swagger": {
+        "ClientId": "Markisa_Swagger",
+        "ClientSecret": "1q2w3e*",
+        "RootUrl": "https://localhost:44390"
+      }
+    }
+  }
+}

@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <Import Project="..\..\common.props" />
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <RootNamespace>Markisa</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Markisa.Domain\Markisa.Domain.csproj" />
+    <ProjectReference Include="..\Markisa.Application.Contracts\Markisa.Application.Contracts.csproj" />
+	<ProjectReference Include="..\..\modules\account\src\Volo.Abp.Account.Application\Volo.Abp.Account.Application.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Volo.Abp.Account.Application" Version="4.0.1" />
+    <PackageReference Include="Volo.Abp.Identity.Application" Version="4.0.1" />
+    <PackageReference Include="Volo.Abp.PermissionManagement.Application" Version="4.0.1" />
+    <PackageReference Include="Volo.Abp.TenantManagement.Application" Version="4.0.1" />
+    <PackageReference Include="Volo.Abp.FeatureManagement.Application" Version="4.0.1" />
+  </ItemGroup>
+
+</Project>
