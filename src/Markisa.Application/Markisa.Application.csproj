@@ -10,7 +10,6 @@
   <ItemGroup>
     <ProjectReference Include="..\Markisa.Domain\Markisa.Domain.csproj" />
     <ProjectReference Include="..\Markisa.Application.Contracts\Markisa.Application.Contracts.csproj" />
-	<ProjectReference Include="..\..\modules\account\src\Volo.Abp.Account.Application\Volo.Abp.Account.Application.csproj" />
   </ItemGroup>
 
   <ItemGroup>
