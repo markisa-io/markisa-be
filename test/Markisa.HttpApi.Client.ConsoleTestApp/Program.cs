@@ -6,7 +6,7 @@ namespace Markisa.HttpApi.Client.ConsoleTestApp
 {
     class Program
     {
-        static async Task Main(string[] args)
+        public static async Task Main(string[] args)
         {
             await CreateHostBuilder(args).RunConsoleAsync();
         }
