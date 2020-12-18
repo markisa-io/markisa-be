@@ -12,7 +12,7 @@ COPY src/Markisa.EntityFrameworkCore.DbMigrations/*.csproj ./Markisa.EntityFrame
 COPY src/Markisa.HttpApi/*.csproj ./Markisa.HttpApi/
 COPY src/Markisa.HttpApi.Client/*.csproj ./Markisa.HttpApi.Client/
 COPY src/Markisa.HttpApi.Host/*.csproj ./Markisa.HttpApi.Host/
-RUN RUN dotnet restore Markisa.HttpApi.Host/complexapp.csproj
+RUN dotnet restore Markisa.HttpApi.Host/complexapp.csproj
 
 # copy everything else and build app
 COPY src/Markisa.Application/. ./Markisa.HttpApi.Host/
