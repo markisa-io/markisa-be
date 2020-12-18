@@ -258,5 +258,5 @@ src/Markisa.IdentityServer/Logs/*
 src/Markisa.HttpApi.Host/Logs/*
 src/Markisa.HttpApi.Host/Logs/*
 src/Markisa.DbMigrator/Logs/*
-src/Markisa.HttpApi.Host/appsettings.json
+#src/Markisa.HttpApi.Host/appsettings.json
 src/Markisa.DbMigrator/appsettings.json
