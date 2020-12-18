@@ -19,7 +19,7 @@ COPY src/Markisa.HttpApi.Host/Markisa.HttpApi.Host.csproj src/Markisa.HttpApi.Ho
 COPY test/Markisa.Application.Tests/Markisa.Application.Tests.csproj test/Markisa.Application.Tests/Markisa.Application.Tests.csproj
 COPY test/Markisa.Domain.Tests/Markisa.Domain.Tests.csproj test/Markisa.Domain.Tests/Markisa.Domain.Tests.csproj
 COPY test/Markisa.EntityFrameworkCore.Tests/Markisa.EntityFrameworkCore.Tests.csproj test/Markisa.EntityFrameworkCore.Tests/Markisa.EntityFrameworkCore.Tests.csproj
-COPY test/Markisa.HttpApi.Client.ConsoleTestApp/Markisa.HttpApi.Client.ConsoleTestApp.csproj test/Markisa.HttpApi.Client.ConsoleTestApp/Markisa.HttpApi.Client.ConsoleTestApp.csproj
+# COPY test/Markisa.HttpApi.Client.ConsoleTestApp/Markisa.HttpApi.Client.ConsoleTestApp.csproj test/Markisa.HttpApi.Client.ConsoleTestApp/Markisa.HttpApi.Client.ConsoleTestApp.csproj
 COPY test/Markisa.TestBase/Markisa.TestBase.csproj test/Markisa.TestBase/Markisa.TestBase.csproj
 
 
