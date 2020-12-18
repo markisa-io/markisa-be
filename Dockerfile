@@ -1,26 +1,26 @@
 FROM mcr.microsoft.com/dotnet/sdk:5.0 AS build
 WORKDIR /source
 
-COPY ./*.sln ./NuGet.config  ./
+COPY *.sln NuGet.config  ./
 
 # Copy the main source project files
-COPY ./src/Markisa.Application/Markisa.Application.csproj ./src/Markisa.Application/Markisa.Application.csproj
-COPY ./src/Markisa.Application.Contracts/Markisa.Application.Contracts.csproj ./src/Markisa.Application.Contracts/Markisa.Application.Contracts.csproj
-COPY ./src/Markisa.DbMigrator/Markisa.DbMigrator.csproj ./src/Markisa.DbMigrator/Markisa.DbMigrator.csproj
-COPY ./src/Markisa.Domain/Markisa.Domain.csproj ./src/Markisa.Domain/Markisa.Domain.csproj
-COPY ./src/Markisa.Domain.Shared/Markisa.Domain.Shared.csproj ./src/Markisa.Domain.Shared/Markisa.Domain.Shared.csproj
-COPY ./src/Markisa.EntityFrameworkCore/Markisa.EntityFrameworkCore.csproj ./src/Markisa.EntityFrameworkCore/Markisa.EntityFrameworkCore.csproj
-COPY ./src/Markisa.EntityFrameworkCore.DbMigrations/Markisa.EntityFrameworkCore.DbMigrations.csproj ./src/Markisa.EntityFrameworkCore.DbMigrations/Markisa.EntityFrameworkCore.DbMigrations.csproj
-COPY ./src/Markisa.HttpApi/Markisa.HttpApi.csproj ./src/Markisa.HttpApi/Markisa.HttpApi.csproj
-COPY ./src/Markisa.HttpApi.Client/Markisa.HttpApi.Client.csproj ./src/Markisa.HttpApi.Client/Markisa.HttpApi.Client.csproj
-COPY ./src/Markisa.HttpApi.Host/Markisa.HttpApi.Host.csproj ./src/Markisa.HttpApi.Host/Markisa.HttpApi.Host.csproj
+COPY src/Markisa.Application/Markisa.Application.csproj src/Markisa.Application/Markisa.Application.csproj
+COPY src/Markisa.Application.Contracts/Markisa.Application.Contracts.csproj src/Markisa.Application.Contracts/Markisa.Application.Contracts.csproj
+COPY src/Markisa.DbMigrator/Markisa.DbMigrator.csproj src/Markisa.DbMigrator/Markisa.DbMigrator.csproj
+COPY src/Markisa.Domain/Markisa.Domain.csproj src/Markisa.Domain/Markisa.Domain.csproj
+COPY src/Markisa.Domain.Shared/Markisa.Domain.Shared.csproj src/Markisa.Domain.Shared/Markisa.Domain.Shared.csproj
+COPY src/Markisa.EntityFrameworkCore/Markisa.EntityFrameworkCore.csproj src/Markisa.EntityFrameworkCore/Markisa.EntityFrameworkCore.csproj
+COPY src/Markisa.EntityFrameworkCore.DbMigrations/Markisa.EntityFrameworkCore.DbMigrations.csproj src/Markisa.EntityFrameworkCore.DbMigrations/Markisa.EntityFrameworkCore.DbMigrations.csproj
+COPY src/Markisa.HttpApi/Markisa.HttpApi.csproj src/Markisa.HttpApi/Markisa.HttpApi.csproj
+COPY src/Markisa.HttpApi.Client/Markisa.HttpApi.Client.csproj src/Markisa.HttpApi.Client/Markisa.HttpApi.Client.csproj
+COPY src/Markisa.HttpApi.Host/Markisa.HttpApi.Host.csproj src/Markisa.HttpApi.Host/Markisa.HttpApi.Host.csproj
 
 RUN dotnet restore
 
-COPY ./src ./src  
+COPY src src  
 RUN dotnet build -c Release --no-restore
 
-RUN dotnet publish "./src/Markisa.HttpApi.Host/Markisa.HttpApi.Host.csproj" -c Release -o "../../dist" --no-restore
+RUN dotnet publish "src/Markisa.HttpApi.Host/Markisa.HttpApi.Host.csproj" -c Release -o "../../dist" --no-restore
 
 # copy csproj and restore as distinct layers
 # COPY src/Markisa.Application/*.csproj ./Markisa.Application/
