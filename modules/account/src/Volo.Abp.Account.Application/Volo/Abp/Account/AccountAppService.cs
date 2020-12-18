@@ -42,6 +42,16 @@ namespace Volo.Abp.Account
 
             var user = new IdentityUser(GuidGenerator.Create(), input.UserName, input.EmailAddress, CurrentTenant.Id);
 
+            if (!string.IsNullOrEmpty(input.CompanyName))
+            {
+                user.CompanyName = input.CompanyName;
+            }
+
+            if(!string.IsNullOrEmpty(input.PhoneNumber))
+            {
+                user.SetPhoneNumber(input.PhoneNumber, false);
+            }            
+
             (await UserManager.CreateAsync(user, input.Password)).CheckErrors();
 
             await UserManager.SetEmailAsync(user,input.EmailAddress);

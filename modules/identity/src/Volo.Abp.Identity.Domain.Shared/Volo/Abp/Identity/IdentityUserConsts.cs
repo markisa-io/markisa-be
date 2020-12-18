@@ -18,6 +18,8 @@ namespace Volo.Abp.Identity
 
         public static int MaxPhoneNumberLength { get; set; } = AbpUserConsts.MaxPhoneNumberLength;
 
+        public static int MaxCompanyNameLength { get; set; } = 256;
+
         /// <summary>
         /// Default value: 128
         /// </summary>

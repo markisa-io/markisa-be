@@ -174,6 +174,7 @@ namespace Volo.Abp.Identity
 
             user.Name = input.Name;
             user.Surname = input.Surname;
+            user.CompanyName = input.CompanyName;
 
             if (input.RoleNames != null)
             {

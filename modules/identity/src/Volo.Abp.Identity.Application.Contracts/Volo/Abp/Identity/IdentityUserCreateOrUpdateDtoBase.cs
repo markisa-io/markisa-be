@@ -26,6 +26,9 @@ namespace Volo.Abp.Identity
         [DynamicStringLength(typeof(IdentityUserConsts), nameof(IdentityUserConsts.MaxPhoneNumberLength))]
         public string PhoneNumber { get; set; }
 
+        [DynamicStringLength(typeof(IdentityUserConsts), nameof(IdentityUserConsts.MaxCompanyNameLength))]
+        public string CompanyName { get; set; }
+
         public bool LockoutEnabled { get; set; }
 
         [CanBeNull]

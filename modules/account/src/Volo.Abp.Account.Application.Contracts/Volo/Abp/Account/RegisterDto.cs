@@ -24,5 +24,9 @@ namespace Volo.Abp.Account
 
         [Required]
         public string AppName { get; set; }
+
+        public string CompanyName { get; set; }
+
+        public string PhoneNumber { get; set; }
     }
 }

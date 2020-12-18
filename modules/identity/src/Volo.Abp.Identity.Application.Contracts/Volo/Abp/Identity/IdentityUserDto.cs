@@ -21,6 +21,8 @@ namespace Volo.Abp.Identity
 
         public string PhoneNumber { get; set; }
 
+        public string CompanyName { get; set; }
+
         public bool PhoneNumberConfirmed { get; set; }
 
         public bool LockoutEnabled { get; set; }

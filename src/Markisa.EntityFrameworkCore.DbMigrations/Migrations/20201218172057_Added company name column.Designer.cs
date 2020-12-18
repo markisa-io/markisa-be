@@ -3,6 +3,7 @@ using System;
 using Markisa.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 using Volo.Abp.EntityFrameworkCore;
@@ -10,9 +11,10 @@ using Volo.Abp.EntityFrameworkCore;
 namespace Markisa.Migrations
 {
     [DbContext(typeof(MarkisaMigrationsDbContext))]
-    partial class MarkisaMigrationsDbContextModelSnapshot : ModelSnapshot
+    [Migration("20201218172057_Added company name column")]
+    partial class Addedcompanynamecolumn
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -600,9 +602,7 @@ namespace Markisa.Migrations
                         .HasColumnName("AccessFailedCount");
 
                     b.Property<string>("CompanyName")
-                        .HasMaxLength(256)
-                        .HasColumnType("character varying(256)")
-                        .HasColumnName("CompanyName");
+                        .HasColumnType("text");
 
                     b.Property<string>("ConcurrencyStamp")
                         .IsConcurrencyToken()

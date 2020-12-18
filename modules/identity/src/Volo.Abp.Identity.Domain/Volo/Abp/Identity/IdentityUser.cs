@@ -76,6 +76,13 @@ namespace Volo.Abp.Identity
         [CanBeNull]
         public virtual string PhoneNumber { get; protected internal set; }
 
+
+        /// <summary>
+        /// Gets or sets a company name for the user.
+        /// </summary>
+        [CanBeNull]
+        public virtual string CompanyName { get; set; }
+
         /// <summary>
         /// Gets or sets a flag indicating if a user has confirmed their telephone address.
         /// </summary>
