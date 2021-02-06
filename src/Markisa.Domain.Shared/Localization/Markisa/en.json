@@ -3,6 +3,11 @@
   "texts": {
     "Menu:Home": "Home",
     "Welcome": "Welcome",
-    "LongWelcomeMessage": "Welcome to the application. This is a startup project based on the ABP framework. For more information, visit abp.io."
+    "LongWelcomeMessage": "Welcome to the application. This is a startup project based on the ABP framework. For more information, visit abp.io.",
+    "ConfirmationLink": "Please click this link to confirm your email.",
+    "EmailConfirmation": "Email confirmation.",
+    "EmailConfirmationInfoInEmail": "Thank you for registering with us. You have been successfully registered.",
+    "EmailConfirmationSubject":  "Email Confirmation."
+
   }
 }

@@ -24,5 +24,10 @@
         "RootUrl": "https://localhost:44390"
       }
     }
+  },
+
+  "Email": {
+    "SenderEmail": "sender@email.com",
+    "ApiKey": "" 
   }
 }
