@@ -1,0 +1,37 @@
+﻿@using Markisa.Localization
+@using Microsoft.AspNetCore.Mvc.Localization
+@model Markisa.Models.ConfirmEmailViewModel
+@inject IHtmlLocalizer<MarkisaResource> L
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Email Confirmation</title>
+</head>
+<body>
+<p>
+        @if (Model.Success)
+        {
+            <div>
+                <h3>@L["EmailConfirmationSucceeded"]</h3>
+            </div>
+            @:<a href="@Model.SuccessActionLink">@L["EmailConfirmationSucceededActionLink"]</a>
+
+
+        }
+        else
+        {
+            <div>
+                <h3>@L["EmailConfirmationFailed"]</h3>
+            </div>
+            @:<a href="@Model.SuccessActionLink">@L["EmailConfirmationFailedLink"]</a>
+        }
+    </p>
+
+</body>
+</html>

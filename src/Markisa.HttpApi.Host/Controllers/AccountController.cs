@@ -1,14 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Text;
 using System.Threading.Tasks;
-using System.Web;
+using Markisa.Models;
 using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.WebUtilities;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Localization;
+using SendGrid;
 using Volo.Abp.AspNetCore.Mvc;
 using Volo.Abp.Identity;
 
@@ -17,10 +15,12 @@ namespace Markisa.Controllers
     public class AccountController: AbpController
     {
         private IdentityUserManager UserManager { get; }
+        private IConfiguration Configuration { get; }
 
-        public AccountController(IdentityUserManager userManager)
+        public AccountController(IdentityUserManager userManager, IConfiguration configuration)
         {
             UserManager = userManager;
+            Configuration = configuration;
         }
 
         [HttpGet]
@@ -39,12 +39,13 @@ namespace Markisa.Controllers
             var codeDecoded = Encoding.UTF8.GetString(codeDecodedBytes);
             var result = await UserManager.ConfirmEmailAsync(user, codeDecoded);
 
-            if (result.Succeeded)
-            {
-                return Content(L.GetString(("EmailConfirmed")));
-            }
+            var configurationSection = Configuration.GetSection("Url");
+            var failedLink = configurationSection["ContactUsPage"];
+            var loginLink = configurationSection["LoginPage"];
 
-            return Content(L.GetString("EmailConfirmationFailed"));
+            var model = new ConfirmEmailViewModel(){Success = result.Succeeded, FailedActionLink = failedLink , SuccessActionLink = loginLink};
+
+            return View("ConfirmEmail", model);
         }
     }
 }

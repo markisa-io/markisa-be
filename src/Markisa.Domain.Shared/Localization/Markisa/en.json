@@ -7,7 +7,11 @@
     "ConfirmationLink": "Please click this link to confirm your email.",
     "EmailConfirmation": "Email confirmation.",
     "EmailConfirmationInfoInEmail": "Thank you for registering with us. You have been successfully registered.",
-    "EmailConfirmationSubject":  "Email Confirmation."
+    "EmailConfirmationSubject": "Email Confirmation.",
+    "EmailConfirmationFailed": "Email confirmation failed.",
+    "EmailConfirmationSucceeded": "Email confirmation succeeded.",
+    "EmailConfirmationSucceededActionLink": "Click this link to go to login page.",
+    "EmailConfirmationFailedActionLInk": "Click this link to contact us."
 
   }
 }
