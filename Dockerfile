@@ -18,10 +18,10 @@ COPY src/Markisa.HttpApi.Client/*.csproj ./src/Markisa.HttpApi.Client/
 COPY src/Markisa.HttpApi.Host/*.csproj ./src/Markisa.HttpApi.Host/
 
 # Copy the test project files
-COPY test/Markisa.Application.Tests/*.csproj test/Markisa.Application.Tests/
-COPY test/Markisa.Domain.Tests/*.csproj test/Markisa.Domain.Tests/
-COPY test/Markisa.EntityFrameworkCore.Tests/*.csproj test/Markisa.EntityFrameworkCore.Tests/
-COPY test/Markisa.TestBase/*.csproj test/Markisa.TestBase/
+# COPY test/Markisa.Application.Tests/*.csproj test/Markisa.Application.Tests/
+# COPY test/Markisa.Domain.Tests/*.csproj test/Markisa.Domain.Tests/
+# COPY test/Markisa.EntityFrameworkCore.Tests/*.csproj test/Markisa.EntityFrameworkCore.Tests/
+# COPY test/Markisa.TestBase/*.csproj test/Markisa.TestBase/
 
 RUN dotnet restore
 
