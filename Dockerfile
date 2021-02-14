@@ -1,4 +1,4 @@
-FROM mcr.microsoft.com/dotnet/sdk:5.0-alpine AS build-env
+FROM mcr.microsoft.com/dotnet/sdk:5.0-focal AS build-env
 WORKDIR /app
 
 COPY Markisa.sln NuGet.Config common.props  ./
