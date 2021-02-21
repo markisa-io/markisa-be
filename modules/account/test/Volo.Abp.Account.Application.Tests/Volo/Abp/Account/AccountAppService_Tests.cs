@@ -34,7 +34,11 @@ namespace Volo.Abp.Account
                 UserName = "bob.lee",
                 EmailAddress = "bob.lee@abp.io",
                 Password = "P@ssW0rd",
-                AppName = "MVC"
+                CompanyName = "TestCompany",
+                PhoneNumber = "1231232",
+                AppName = "MVC",
+                Name = "bob lee",
+                SurName = "bob"
             };
 
             await _accountAppService.RegisterAsync(registerDto);
@@ -45,6 +49,10 @@ namespace Volo.Abp.Account
             user.ShouldNotBeNull();
             user.UserName.ShouldBe("bob.lee");
             user.Email.ShouldBe("bob.lee@abp.io");
+            user.PhoneNumber.ShouldBe("1231232");
+            user.CompanyName.ShouldBe("TestCompany");
+            user.Name.ShouldBe("bob lee");
+            user.Surname.ShouldBe("bob");
 
             (await _userManager.CheckPasswordAsync(user, "P@ssW0rd")).ShouldBeTrue();
         }
