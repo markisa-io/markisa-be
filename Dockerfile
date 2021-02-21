@@ -39,6 +39,6 @@ FROM mcr.microsoft.com/dotnet/aspnet:5.0
 WORKDIR /app
 
 COPY --from=build-env /app/out/ .
-COPY conf/dev/appsettings.json /app/out/
+COPY conf/dev/appsettings.json /app/
 
 ENTRYPOINT ["dotnet", "Markisa.HttpApi.Host.dll"]
