@@ -24,6 +24,10 @@ COPY test/Markisa.EntityFrameworkCore.Tests/*.csproj test/Markisa.EntityFramewor
 COPY test/Markisa.HttpApi.Client.ConsoleTestApp/*.csproj test/Markisa.HttpApi.Client.ConsoleTestApp/
 COPY test/Markisa.TestBase/*.csproj test/Markisa.TestBase/
 
+# Copy Conf 
+COPY conf/dev/appsettings.json ./conf/dev/appsettings.json
+COPY conf/prod/appsettings.json ./conf/prod/appsettings.json
+
 RUN dotnet restore
 
 # Copy everything else and build
@@ -33,5 +37,8 @@ RUN dotnet publish -c Release -o out
 # Build runtime image
 FROM mcr.microsoft.com/dotnet/aspnet:5.0
 WORKDIR /app
+
 COPY --from=build-env /app/out/ .
+COPY conf/dev/appsettings.json /app/out/ .
+
 ENTRYPOINT ["dotnet", "Markisa.HttpApi.Host.dll"]
