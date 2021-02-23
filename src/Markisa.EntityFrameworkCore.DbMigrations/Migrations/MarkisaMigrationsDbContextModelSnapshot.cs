@@ -599,6 +599,11 @@ namespace Markisa.Migrations
                         .HasDefaultValue(0)
                         .HasColumnName("AccessFailedCount");
 
+                    b.Property<string>("CompanyName")
+                        .HasMaxLength(256)
+                        .HasColumnType("character varying(256)")
+                        .HasColumnName("CompanyName");
+
                     b.Property<string>("ConcurrencyStamp")
                         .IsConcurrencyToken()
                         .HasMaxLength(40)

@@ -31,11 +31,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Markisa.TestBase", "test\Ma
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Markisa.Domain.Tests", "test\Markisa.Domain.Tests\Markisa.Domain.Tests.csproj", "{E512F4D9-9375-480F-A2F6-A46509F9D824}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Markisa.HttpApi.Client.ConsoleTestApp", "test\Markisa.HttpApi.Client.ConsoleTestApp\Markisa.HttpApi.Client.ConsoleTestApp.csproj", "{EF480016-9127-4916-8735-D2466BDBC582}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Markisa.HttpApi.Client.ConsoleTestApp", "test\Markisa.HttpApi.Client.ConsoleTestApp\Markisa.HttpApi.Client.ConsoleTestApp.csproj", "{EF480016-9127-4916-8735-D2466BDBC582}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Markisa.DbMigrator", "src\Markisa.DbMigrator\Markisa.DbMigrator.csproj", "{AA94D832-1CCC-4715-95A9-A483F23A1A5D}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Markisa.HttpApi.Host", "src\Markisa.HttpApi.Host\Markisa.HttpApi.Host.csproj", "{748584B1-BA69-4F6A-81AA-F4BDE6BCE29D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Markisa.HttpApi.Host", "src\Markisa.HttpApi.Host\Markisa.HttpApi.Host.csproj", "{748584B1-BA69-4F6A-81AA-F4BDE6BCE29D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
