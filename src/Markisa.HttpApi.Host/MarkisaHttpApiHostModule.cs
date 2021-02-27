@@ -44,7 +44,7 @@ namespace Markisa
     )]
     public class MarkisaHttpApiHostModule : AbpModule
     {
-        private const string DefaultCorsPolicyName = "Default";
+        private const string DefaultCorsPolicyName = "AllowAll";
 
         public override void ConfigureServices(ServiceConfigurationContext context)
         {
