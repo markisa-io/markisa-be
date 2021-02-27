@@ -26,6 +26,7 @@ namespace Markisa.Controllers
         [HttpGet]
         [Route("confirmEmail")]
         [AllowAnonymous]
+        [ApiExplorerSettings(IgnoreApi = true)]
         public virtual async Task<IActionResult> ConfirmEmail(string userId, string token)
         {
             var user = await UserManager.FindByIdAsync(userId);
