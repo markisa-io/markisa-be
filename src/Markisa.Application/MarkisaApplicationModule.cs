@@ -5,6 +5,7 @@ using Volo.Abp.Identity;
 using Volo.Abp.Modularity;
 using Volo.Abp.PermissionManagement;
 using Volo.Abp.TenantManagement;
+using Volo.Abp.VirtualFileSystem;
 
 namespace Markisa
 {
@@ -21,6 +22,11 @@ namespace Markisa
     {
         public override void ConfigureServices(ServiceConfigurationContext context)
         {
+            Configure<AbpVirtualFileSystemOptions>(options =>
+            {
+                options.FileSets.AddEmbedded<MarkisaApplicationModule>();
+            });
+
             Configure<AbpAutoMapperOptions>(options =>
             {
                 options.AddMaps<MarkisaApplicationModule>();

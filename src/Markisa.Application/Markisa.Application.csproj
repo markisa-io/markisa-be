@@ -7,18 +7,26 @@
 		<RootNamespace>Markisa</RootNamespace>
 	</PropertyGroup>
 
-	<ItemGroup>
-		<ProjectReference Include="..\Markisa.Domain\Markisa.Domain.csproj" />
-		<ProjectReference Include="..\Markisa.Application.Contracts\Markisa.Application.Contracts.csproj" />
-	</ItemGroup>
+   <ItemGroup>
+    <None Remove="Communications\Templates\EmailConfirmation.tpl" />
+  </ItemGroup>
 
-	<ItemGroup>
-		<PackageReference Include="Volo.Abp.Account.Application" Version="4.0.1" />
-		<ProjectReference Include="..\..\modules\identity\src\Volo.Abp.Identity.Application\Volo.Abp.Identity.Application.csproj" />
-		<PackageReference Include="Volo.Abp.PermissionManagement.Application" Version="4.0.1" />
-		<PackageReference Include="Volo.Abp.TenantManagement.Application" Version="4.0.1" />
-		<PackageReference Include="Volo.Abp.FeatureManagement.Application" Version="4.0.1" />
-		<ProjectReference Include="..\..\modules\account\src\Volo.Abp.Account.Application\Volo.Abp.Account.Application.csproj" />
-	</ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Communications\Templates\EmailConfirmation.tpl" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Markisa.Domain\Markisa.Domain.csproj" />
+    <ProjectReference Include="..\Markisa.Application.Contracts\Markisa.Application.Contracts.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="SendGrid" Version="9.22.0" />
+    <ProjectReference Include="..\..\modules\account\src\Volo.Abp.Account.Application\Volo.Abp.Account.Application.csproj" />
+ 	  <ProjectReference Include="..\..\modules\identity\src\Volo.Abp.Identity.Application\Volo.Abp.Identity.Application.csproj" />
+    <PackageReference Include="Volo.Abp.PermissionManagement.Application" Version="4.0.1" />
+    <PackageReference Include="Volo.Abp.TenantManagement.Application" Version="4.0.1" />
+    <PackageReference Include="Volo.Abp.FeatureManagement.Application" Version="4.0.1" />
+  </ItemGroup>
 
 </Project>
